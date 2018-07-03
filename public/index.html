@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <style>
       body { background-color: #F2F6D0 }
       #wrapper {
@@ -39,7 +40,13 @@
   <body>
     <div id="wrapper">
       <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
+      <h2><i>Mark's Scrapper</i></h2>
+      <form>
+        <input type="button" value="Scrape" onclick="alert('Scraped')" id="scrapebutton"/>
+      </form>
+      <form>
+        <input type="button" value="Articles" onclick="window.location.href='/articles'" />
+      </form>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>

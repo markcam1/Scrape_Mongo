@@ -3,7 +3,7 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].summary + "<br />"+ data[i].link + "</p>");
   }
 });
 
@@ -69,4 +69,20 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+});
+
+$(document).on("click", "#scrapebutton", function() {
+
+  // Run a POST request to change the note, using what's entered in the inputs
+  $.ajax({
+    method: "GET",
+    url: "/scrape/",
+  })
+    // With that done
+    .then(function(data) {
+      // Log the response
+      console.log(data);
+
+    });
+
 });

@@ -1,2 +1,4 @@
 # Scrape_Mongo
-App built with Mongoose and Cheerio
+Web Scraping application built with Mongoose and Cheerio
+
+
